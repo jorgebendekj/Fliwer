@@ -1,0 +1,8 @@
+/* En tu index.css o archivo global */
+.react-datepicker__time-list-item--selected {
+    background-color: var(--card-color) !important;
+  }
+
+  .react-datepicker__header {
+    background-color: var(--card-color) !important;
+  }

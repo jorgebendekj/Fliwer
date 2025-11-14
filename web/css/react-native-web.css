@@ -1,0 +1,40 @@
+body {
+  font-size: 0px;
+}
+
+body > * {
+  font-size: initial;
+}
+
+
+#react-root {
+  font-size: initial;
+}
+
+/*#react-root > .r-flex-13awgt0 {
+  height:100%;
+}*/
+
+#react-root > div {
+  height:100%;
+}
+
+.video-react.video-react-fluid, .video-react.video-react-16-9, .video-react.video-react-4-3{
+  padding-top:0!important;
+  height:100%;
+}
+
+.video-react .video-react-big-play-button{
+  left: 50%;
+  margin-left: -1.5em;
+  top: 50%;
+  margin-top: -0.75em;
+}
+
+.alice-carousel{
+  height:100%;
+}
+
+.videoModal{
+  border-radius:20px;
+}

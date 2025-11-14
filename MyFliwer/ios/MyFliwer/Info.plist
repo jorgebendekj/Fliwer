@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>Fliwer</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.fliwer.Fliwer</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.fliwer.FliwerDeepLink</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>FliwerDeepLink</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb1469782766851933</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.1092770741396-lasdjik8et450uuh0fhilivesb45mdfo</string>
+			</array>
+		</dict>
+		<dict>
+	        <key>CFBundleTypeRole</key>
+	        <string>None</string>
+	        <key>CFBundleURLName</key>
+	        <string>AzureAuth</string>
+	        <key>CFBundleURLSchemes</key>
+	        <array>
+	            <string>com.fliwer.Fliwer</string>
+	        </array>
+	    </dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>FacebookAppID</key>
+	<string>1469782766851933</string>
+	<key>FacebookDisplayName</key>
+	<string>Fliwer</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbauth2</string>
+		<string>fbapi</string>
+		<string>fb-messenger-api</string>
+		<string>fbshareextension</string>
+		<string>whatsapp</string>
+	</array>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+			  <!-- Do not change NSAllowsArbitraryLoads to true, or you will risk app rejection! -->
+			<key>NSAllowsArbitraryLoads</key>
+			<false/>
+			<key>NSAllowsLocalNetworking</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>This permission is not needed by the app, but it is required by an underlying API. If you see this dialog, contact us.</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>This permission is not needed by the app, but it is required by an underlying API. If you see this dialog, contact us.</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>This app requires access to the bluetooth to request and send data to configure the new devices with the house router</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>This app requires access to the calendar to add irrigation programs and sync it with the user calendar.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>This app requires access to the camera to record videos, take photos of the plants and gardens and use them in the background of each area. In addition to taking photos and recording videos to post them in the incidents and audits section.</string>
+	<key>NSContactsUsageDescription</key>
+	<string>This permission is not needed by the app, but it is required by an underlying API. If you see this dialog, contact us.</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>Authentication for important account changes</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>This app requires access to your location to set the garden coordinates and later represent the position on a map. Set the coordinates in an incident or audit. Set the coordinates on the irrigation devices to locate them on a gardener's map.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This app requires access to your location to set the garden coordinates and later represent the position on a map. Set the coordinates in an incident or audit. Set the coordinates on the irrigation devices to locate them on a gardener's map.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This app requires access to your location to set the garden coordinates and later represent the position on a map. Set the coordinates in an incident or audit. Set the coordinates on the irrigation devices to locate them on a gardener's map.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>This app requires access to the microphone, to record the audio in the videos of the incidents and audits.</string>
+	<key>NSMotionUsageDescription</key>
+	<string>This permission is not needed by the app, but it is required by an underlying API. If you see this dialog, contact us.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This app requires access to the photo gallery to select an image and post it on the user's profile, set it as the front page of the garden, upload it in an audit or incident. In addition, we require access to upload a file in the audits and incidents section.</string>
+	<key>NSSiriUsageDescription</key>
+	<string>This permission is not needed by the app, but it is required by an underlying API. If you see this dialog, contact us.</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>MaterialCommunityIcons.ttf</string>
+		<string>Entypo.ttf</string>
+		<string>EvilIcons.ttf</string>
+		<string>Feather.ttf</string>
+		<string>FontAwesome.ttf</string>
+		<string>Foundation.ttf</string>
+		<string>Ionicons.ttf</string>
+		<string>MaterialIcons.ttf</string>
+		<string>Octicons.ttf</string>
+		<string>SimpleLineIcons.ttf</string>
+		<string>Zocial.ttf</string>
+		<string>XenoisSoftProBold.otf</string>
+		<string>AlrightSansLight.otf</string>
+		<string>AlrightSansRegular.otf</string>
+		<string>MyriadProRegular.ttf</string>
+		<string>AvenirNextBold.ttf</string>
+		<string>AvenirNextIt.otf</string>
+		<string>AvenirNextLight.otf</string>
+		<string>AvenirNextRegular.otf</string>
+		<string>RobotoThin.ttf</string>
+	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv64</string>
+	</array>
+	<key>UIRequiresFullScreen</key>
+	<true/>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+</dict>
+</plist>

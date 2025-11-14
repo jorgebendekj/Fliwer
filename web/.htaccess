@@ -1,0 +1,16 @@
+# Apache configuration file (see httpd.apache.org/docs/2.2/mod/quickreference.html)
+
+# Disable directory listing
+Options -Indexes
+
+# Enable to serve gzip compression
+RewriteEngine On    
+RewriteCond %{HTTP:Accept-encoding} gzip
+RewriteCond %{REQUEST_FILENAME}\.gz -s
+#RewriteRule ^(.*)\.(html|css|js|data) $1\.$2\.gz [QSA]
+RewriteRule ^(.*)\.(js) $1\.$2\.gz [QSA]
+
+# Prevent double gzip and give the correct mime-type
+RewriteRule \.js\.gz$ - [T=text/javascript,E=no-gzip:1,E=FORCE_GZIP]
+
+Header set Content-Encoding gzip env=FORCE_GZIP

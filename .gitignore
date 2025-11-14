@@ -1,0 +1,9 @@
+MyFliwer/node_modules
+node_modules
+.idea
+nbproject
+.gitconfig
+web/build
+yarn.lock
+MyFliwer/yarn.lock
+*.keystore

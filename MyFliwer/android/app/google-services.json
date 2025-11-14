@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "191324911730",
+    "project_id": "taskium-6c8bc",
+    "storage_bucket": "taskium-6c8bc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:191324911730:android:02c1ab38068f204eb86aeb",
+        "android_client_info": {
+          "package_name": "com.inolvetaskium"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqU92mDBKgCqsZvqstjoqqBtoHtmcHtTk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

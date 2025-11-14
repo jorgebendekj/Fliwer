@@ -1,0 +1,85 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/AlrightSansLight.otf",
+      "sha1": "832646d58c0d2c301986793ee90878807da461ce"
+    },
+    {
+      "path": "assets/fonts/AlrightSansRegular.otf",
+      "sha1": "4d22413836e4e3c8c44140f318bdb2bcbc94b1ca"
+    },
+    {
+      "path": "assets/fonts/AvenirNextBold.ttf",
+      "sha1": "f901f2821d19d927fb39655b2f646153cbc9b6fa"
+    },
+    {
+      "path": "assets/fonts/AvenirNextIt.otf",
+      "sha1": "602fc8cdb3bd9e5fe83b6ea19e0762a394f287f3"
+    },
+    {
+      "path": "assets/fonts/AvenirNextLight.otf",
+      "sha1": "4d22413836e4e3c8c44140f318bdb2bcbc94b1ca"
+    },
+    {
+      "path": "assets/fonts/AvenirNextRegular.otf",
+      "sha1": "5431b8a80300b8dd7014f2f1d05c66b3f0d89f38"
+    },
+    {
+      "path": "assets/fonts/Entypo.ttf",
+      "sha1": "47870a67dd50871765f799caa97da87219ee47c5"
+    },
+    {
+      "path": "assets/fonts/EvilIcons.ttf",
+      "sha1": "419adcbe74bba91123db3b290775e362f212f3e5"
+    },
+    {
+      "path": "assets/fonts/Feather.ttf",
+      "sha1": "0221f38e9e2dd021335427316ebed05eece74323"
+    },
+    {
+      "path": "assets/fonts/FontAwesome.ttf",
+      "sha1": "13b1eab65a983c7a73bc7997c479d66943f7c6cb"
+    },
+    {
+      "path": "assets/fonts/Foundation.ttf",
+      "sha1": "4b2bce6c792493a4a5716b6fec2dbefe89492c3f"
+    },
+    {
+      "path": "assets/fonts/Ionicons.ttf",
+      "sha1": "0f7956704fe61b49c41ea1a22051240f700a2b44"
+    },
+    {
+      "path": "assets/fonts/MaterialCommunityIcons.ttf",
+      "sha1": "aac61a684025ade260c347309a93f84f4ba09d21"
+    },
+    {
+      "path": "assets/fonts/MaterialIcons.ttf",
+      "sha1": "fc05de31234e0090f7ddc28ce1b23af4026cb1da"
+    },
+    {
+      "path": "assets/fonts/MyriadProRegular.ttf",
+      "sha1": "969e004de800fe16cbe8d0f14529a358ae8066de"
+    },
+    {
+      "path": "assets/fonts/Octicons.ttf",
+      "sha1": "e37c0f879166b2906ffb4d2af24265f4021b4417"
+    },
+    {
+      "path": "assets/fonts/RobotoThin.ttf",
+      "sha1": "0fd03ae48dc48825c79b346fd981f55a01acf9e1"
+    },
+    {
+      "path": "assets/fonts/SimpleLineIcons.ttf",
+      "sha1": "9ffb81a5a11112e292f2cc323e98486bad597599"
+    },
+    {
+      "path": "assets/fonts/XenoisSoftProBold.otf",
+      "sha1": "9325bc1253337ecb7a364c25a538eeb357c557d8"
+    },
+    {
+      "path": "assets/fonts/Zocial.ttf",
+      "sha1": "0bda59c7bcd3d3927de047e091875a4428bfd1ab"
+    }
+  ]
+}
