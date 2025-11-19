@@ -57,8 +57,14 @@ class Service {
             var subdomain = hostname[0];
             var domain = hostname[1] + '.' + hostname[2];
             //Special case: iff app.fliwer.com remove "app.", but only if domain is app.fliwer.com
+            
             if (subdomain == 'app' && domain == 'fliwer.com')
                 subdomain = '';
+            
+            if(subdomain == "127" || subdomain=="localhost"){
+                subdomain="";
+                domain="api.fliwer.com";
+            }
             
             url = (location.protocol === 'http:' ? /*"http://fliwer.com:7198"*/"http://" + subdomain + (subdomain?'.':'') + domain + ":7090" : /*"https://fliwer.com:7199"*/"https://" + subdomain + (subdomain?'.':'') + domain + ":7100");
             //}
