@@ -2,6 +2,7 @@ const path = require('path');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = env => {
 
@@ -10,6 +11,13 @@ module.exports = env => {
     var devMode = (mode !== 'production');
     console.log("devMode:", devMode);
     var plugins = [];
+    
+    // Add ActionSheetIOS shim for web
+    plugins.push(new webpack.NormalModuleReplacementPlugin(
+        /react-native\/Libraries\/ActionSheetIOS\/ActionSheetIOS\.js/,
+        path.resolve(__dirname, 'web/ActionSheetIOS.web.js')
+    ));
+    
     if (!devMode) {
         plugins.push(new CleanWebpackPlugin());
         plugins.push(new HtmlWebpackPlugin({
@@ -44,12 +52,14 @@ module.exports = env => {
                         /MyFliwer*/,
                         /MyFliwer[\\\/]node_modules[\\\/]react-native-material-ui*/,
                         /MyFliwer[\\\/]node_modules[\\\/]react-native-calendars*/,
+                        path.resolve(__dirname, 'web'),
                     ],
                     use: {
                         loader: 'babel-loader',
                         options: {
                             presets: [
-                                ['@babel/preset-env', { targets: "defaults" }]
+                                ['@babel/preset-env', { targets: "defaults" }],
+                                ['@babel/preset-react', { runtime: 'automatic' }]
                             ],
                             plugins: ['@babel/plugin-proposal-class-properties'],
                             compact: false
@@ -109,10 +119,11 @@ module.exports = env => {
         },
         resolve: {
             alias: {
-                "react-native": "react-native-web",
+                "react-native": path.resolve(__dirname, "web/react-native-web-with-shims.js"),
                 "react-native-svg": "svgs",
                 "react-native-maps": "react-native-web-maps",
                 "victory-native": "victory",
+                "react-native-actionsheet": path.resolve(__dirname, "web/react-native-actionsheet.web.js"),
                 react: path.resolve("./node_modules/react")
             },
             extensions:['.web.js', '.js','.jsx']
@@ -126,9 +137,23 @@ module.exports = env => {
                 publicPath: "/",
             },
             static: path.join(__dirname, 'web/build'),
-            host: 'app.fliwer.com',
+            host: '0.0.0.0',
             port: 8082, // webpack v4
-            headers: { "Access-Control-Allow-Origin": "*" }
+            headers: { "Access-Control-Allow-Origin": "*" },
+            allowedHosts: 'all',
+            client: {
+                overlay: {
+                    errors: true,
+                    warnings: false,
+                    runtimeErrors: (error) => {
+                        // Don't show generic "Script error" messages
+                        if (error.message && error.message.includes('Script error')) {
+                            return false;
+                        }
+                        return true;
+                    }
+                }
+            }
         },
         plugins: plugins
 

@@ -19,19 +19,112 @@
             },
           };
         </script>
-        <link href="/css/fliwer.min.css?v=2" rel="stylesheet">
-        <script src="/js/fliwer.min.js?v=1"></script>
-        <script src="/js/autoscript.js?v=1"></script>
+        <!-- CSS and JS files commented out as they don't exist in dev mode -->
+        <!-- <link href="/css/fliwer.min.css?v=2" rel="stylesheet"> -->
+        <!-- <script src="/js/fliwer.min.js?v=1"></script> -->
+        <!-- <script src="/js/autoscript.js?v=1"></script> -->
         <script>
-            Pace.on("done", function(){
-                $("#react-root").fadeIn(1000);
-                Pace.on("start",function(){
-                  $(".pace").hide();
+            // Fallback if Pace is not available
+            function showReactRoot() {
+                var root = document.getElementById("react-root");
+                if (root) {
+                    root.style.display = "block";
+                }
+            }
+            
+            // Try to use Pace if available, otherwise show immediately
+            if (typeof Pace !== 'undefined' && typeof $ !== 'undefined') {
+                Pace.on("done", function(){
+                    $("#react-root").fadeIn(1000);
+                    Pace.on("start",function(){
+                      $(".pace").hide();
+                    });
                 });
-            });
+            } else {
+                // Show immediately if Pace/jQuery not available
+                setTimeout(showReactRoot, 100);
+            }
         </script>
     </head>
     <body>
-        <div id="react-root" class="root" style="display: none"></div>
+        <div id="react-root" class="root" style="display: block !important; visibility: visible !important; opacity: 1 !important;"></div>
+        <script>
+            // Force react-root to be visible immediately and continuously
+            (function() {
+                function ensureVisible() {
+                    var root = document.getElementById("react-root");
+                    if (root) {
+                        // Force visibility with multiple methods
+                        root.style.setProperty('display', 'block', 'important');
+                        root.style.setProperty('visibility', 'visible', 'important');
+                        root.style.setProperty('opacity', '1', 'important');
+                        root.style.display = 'block';
+                        root.style.visibility = 'visible';
+                        root.style.opacity = '1';
+                        
+                        // Also remove any classes that might hide it
+                        root.classList.remove('hidden', 'd-none');
+                    }
+                }
+                
+                // Run immediately
+                ensureVisible();
+                
+                // Run continuously every 100ms for the first 5 seconds
+                var intervalId = setInterval(function() {
+                    ensureVisible();
+                }, 100);
+                setTimeout(function() {
+                    clearInterval(intervalId);
+                }, 5000);
+                
+                // Run on DOM ready
+                if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', ensureVisible);
+                } else {
+                    ensureVisible();
+                }
+                
+                // Run on window load
+                window.addEventListener('load', ensureVisible);
+                
+                // Use MutationObserver to keep it visible
+                setTimeout(function() {
+                    var root = document.getElementById("react-root");
+                    if (root) {
+                        var observer = new MutationObserver(function() {
+                            ensureVisible();
+                        });
+                        observer.observe(root, { 
+                            attributes: true, 
+                            attributeFilter: ['style', 'class'],
+                            childList: true, 
+                            subtree: true 
+                        });
+                        
+                        // Also observe the document for style changes
+                        var styleObserver = new MutationObserver(function(mutations) {
+                            mutations.forEach(function(mutation) {
+                                if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
+                                    ensureVisible();
+                                }
+                            });
+                        });
+                        styleObserver.observe(root, { 
+                            attributes: true, 
+                            attributeFilter: ['style'] 
+                        });
+                    }
+                }, 100);
+                
+                // Also try to use Pace if available
+                if (typeof Pace !== 'undefined' && typeof $ !== 'undefined') {
+                    Pace.on("done", function(){
+                        ensureVisible();
+                        $("#react-root").fadeIn(1000);
+                    });
+                }
+            })();
+        </script>
     </body>
 </html>

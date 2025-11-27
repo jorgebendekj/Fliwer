@@ -249,21 +249,8 @@ style.appendChild(document.createTextNode(chromeAutoFill));
 
 global.envVars={TARGET_RAINOLVE:true}
 
-/*
-// Inject stylesheet
-document.write(require("../MyFliwer/index.js"));
-document.head.appendChild(style);
-document.head.appendChild(document.createElement('script'));
-*/
-
-// Create a new script element
-var script = document.createElement('script');
-
-// Set the source of the script to the required module
-script.src = require("../MyFliwer/index.js");
-
-// Append the script to the document's head
-document.head.appendChild(script);
-
 // Append the style element to the document's head
 document.head.appendChild(style);
+
+// Import and run the React Native app
+import "../MyFliwer/index.js";
